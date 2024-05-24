@@ -1,0 +1,4 @@
+classes=2
+train=data/aktaStart/aktaStart.txt
+valid=data/aktaStart/aktaStart.txt
+names=data/aktaStart/aktaStart.names

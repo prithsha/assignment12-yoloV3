@@ -1,0 +1,3 @@
+Images/AktaStart/img_18.jpg
+Images/AktaStart/img_27.jpg
+Images/AktaStart/img_9.jpg
