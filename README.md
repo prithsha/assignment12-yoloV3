@@ -2,6 +2,58 @@
 Yolov3 assignment 12 submission with Akta start images
 
 
+# Steps followed 
+
+## 1. Downloaded images and perform annotation
+
+Downloaded Akta start protein purifier images from internet and annotated these with the help of tool.
+Annotation generated the coordinates of objects. Two object we tried to identify. 
+1. AktaStart instrument 
+2. Sampler
+
+## 2. Update yolo code configuration for selected images set and classes
+
+Used the repository [School of AI repo](https://github.com/theschoolofai/YoloV3) and downloaded the code
+Updated following files 
+1. Created yolov3-aktaStart.cfg. Updated details based on README instruction :
+  - filters=21 ((4+1+2)*3)
+  - classes=2
+  Because I am lazy updated following as well
+  - burn_in to 100
+  - max_batches to 5000
+  - steps to 4000,4500
+2. Created folder ./data/aktaStart and following files
+  - aktaStart.data
+  - aktaStart.names
+  - aktaStart.txt
+
+3. Moved images and labels from annotation tools under /data/aktaStart folder
+4. Downloaded existing model weights for training
+
+
+## 3.0 Training 
+
+> python train.py --data data/aktaStart/aktaStart.data --batch 10 --cache --cfg cfg/yolov3-aktaStart.cfg --epochs 30
+
+Executed for 30 epochs. It will generate following artifacts:
+  - New models with name best.py and last.pt
+  - train_batch0.png
+  - result.png, results.txt, results.json
+  - results.txt
+
+![Train Output](./train_batch0.png)
+
+## 3.0 Testing 
+
+> python test.py --data data/aktaStart/aktaStart.data --batch 12  --cfg cfg/yolov3-aktaStart.cfg
+
+Before running above command, I renamed the model best.pt to "yolov3-spp-ultralytics.pt"
+
+I kept batch size 12 just for change. It generated the following output
+
+  - test_batch0.png
+
+![Test Output](./test_batch0.png)
 
 ## Execution logs
 
