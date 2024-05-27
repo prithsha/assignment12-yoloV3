@@ -1,4 +1,4 @@
 classes=2
 train=data/aktaStart/aktaStart.txt
-valid=data/aktaStart/aktaStart.txt
+valid=data/aktaStart/aktaStartTest.txt
 names=data/aktaStart/aktaStart.names

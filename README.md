@@ -11,6 +11,8 @@ Annotation generated the coordinates of objects. Two object we tried to identify
 1. AktaStart instrument 
 2. Sampler
 
+Downloaded and annotated 30 image files. 
+
 ## 2. Update yolo code configuration for selected images set and classes
 
 Used the repository [School of AI repo](https://github.com/theschoolofai/YoloV3) and downloaded the code
@@ -25,7 +27,9 @@ Updated following files
 2. Created folder ./data/aktaStart and following files
   - aktaStart.data
   - aktaStart.names
-  - aktaStart.txt
+  - aktaStart.txt : 25 images.
+  - aktaStartTest.txt : 15 images. 10 from training and 5 images are not seen during training.
+
 
 3. Moved images and labels from annotation tools under /data/aktaStart folder
 4. Downloaded existing model weights for training
@@ -33,7 +37,7 @@ Updated following files
 
 ## 3.0 Training 
 
-> python train.py --data data/aktaStart/aktaStart.data --batch 10 --cache --cfg cfg/yolov3-aktaStart.cfg --epochs 30
+> python train.py --data data/aktaStart/aktaStart.data --batch-size 10 --cache --cfg cfg/yolov3-aktaStart.cfg --epochs 30 --weights weights/yolov3-spp-ultralytics.pt
 
 Executed for 30 epochs. It will generate following artifacts:
   - New models with name best.py and last.pt
@@ -45,9 +49,9 @@ Executed for 30 epochs. It will generate following artifacts:
 
 ## 3.0 Testing 
 
-> python test.py --data data/aktaStart/aktaStart.data --batch 12  --cfg cfg/yolov3-aktaStart.cfg
+> python test.py --data data/aktaStart/aktaStart.data --batch-size 10  --cfg cfg/yolov3-aktaStart.cfg --weights weights/best.pt
 
-Before running above command, I renamed the model best.pt to "yolov3-spp-ultralytics.pt"
+Using trained model with name best.pt
 
 I kept batch size 12 just for change. It generated the following output
 

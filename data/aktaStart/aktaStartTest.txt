@@ -1,0 +1,16 @@
+./data/aktaStart/images/img_15.jpg
+./data/aktaStart/images/img_16.jpg
+./data/aktaStart/images/img_17.jpg
+./data/aktaStart/images/img_18.jpg
+./data/aktaStart/images/img_19.jpg
+./data/aktaStart/images/img_20.jpg
+./data/aktaStart/images/img_21.jpg
+./data/aktaStart/images/img_22.jpg
+./data/aktaStart/images/img_23.jpg
+./data/aktaStart/images/img_24.jpg
+./data/aktaStart/images/img_25.jpg
+./data/aktaStart/images/img_26.jpg
+./data/aktaStart/images/img_27.jpg
+./data/aktaStart/images/img_28.jpg
+./data/aktaStart/images/img_29.jpg
+./data/aktaStart/images/img_30.jpg
